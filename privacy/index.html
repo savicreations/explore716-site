@@ -25,10 +25,10 @@
   <main id="main" class="policy wrap">
     <p class="eyebrow">EXPLORE 716</p>
     <h1>Privacy Policy</h1>
-    <p class="policy-meta">Last updated: October 31, 2026</p>
+    <p class="policy-meta">Last updated: November 4, 2026</p>
     <p class="policy-intro">Explore 716 is an Android app for recording outings and exploring Buffalo and its surrounding communities. This policy describes how the app uses location, what it saves, and the outside services involved. Questions can be sent to <a href="mailto:savicreationsny@gmail.com">savicreationsny@gmail.com</a>.</p>
 
-    <div class="policy-note"><strong>In brief:</strong> Explore routes, progress, and Discoveries are saved in the app's local database. We do not operate an account or a server that receives those saved records. Google Maps and Android device backup are separate services described below.</div>
+    <div class="policy-note"><strong>In brief:</strong> Explore 716 works without an account or internet connection. Routes and progress remain in the app's local database. If cloud backup is available in your build and you choose to enable it, selected progress records are also stored in Firebase so you can restore them on another phone. Detailed raw GPS routes are not included in Explore 716 cloud backup.</div>
 
     <section aria-labelledby="location">
       <h2 id="location">Location and Explore sessions</h2>
@@ -37,9 +37,10 @@
     </section>
 
     <section aria-labelledby="storage">
-      <h2 id="storage">Local storage and diagnostics</h2>
-      <p>Explore 716 stores routes, sessions, area progress, Discovery status, and related processing state in SQLite on your device. Maps and routing reference data are packaged with the app. The app does not require an account or send saved Explore history to a developer-operated backend.</p>
-      <p>Field-diagnostics builds may also keep a small rolling history of tracking and recovery events on the device. The app does not automatically upload those events to us. The normal app does not include an advertising or app-analytics integration.</p>
+      <h2 id="storage">Local storage and optional cloud backup</h2>
+      <p>Explore 716 stores routes, sessions, exploration-area progress, Discovery status, and related processing state in SQLite on your device. Maps and routing reference data are packaged with the app. You can use Explore, Destinations, Area Drives, and all progress views without signing in.</p>
+      <p>If you choose cloud backup, Firebase Authentication processes your account email address or Google sign-in identity and an account identifier. Cloud Firestore stores completed exploration zones, Discovery completion and removal states, and stopped-drive summaries such as dates, duration, distance, and discoveries found. These records can reveal places you visited. The app retains a local queue of changes while offline and sends them after connectivity returns. Detailed raw GPS points, route geometry, and field diagnostics are not sent to Explore 716 cloud backup.</p>
+      <p>Field-diagnostics builds may keep a small rolling history of tracking and recovery events on the device. The app does not automatically upload those events to us. The normal app does not include an advertising or app-analytics integration.</p>
     </section>
 
     <section aria-labelledby="third-parties">
@@ -51,24 +52,24 @@
 
     <section aria-labelledby="sharing">
       <h2 id="sharing">Collection and sharing</h2>
-      <p>We do not sell your data, run ads, or maintain a server-side copy of your routes or progress. Google receives the SDK information described above when the in-app map is used. Opening Google Maps is a user-initiated handoff. If you email us, your email provider and ours process that message; we use it to respond to you.</p>
-      <p>This website is a static site hosted by GitHub Pages. It does not include analytics scripts or set its own tracking cookies. GitHub may process requests to serve the site under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>.</p>
+      <p>We do not sell your data or run ads. Google receives the Maps SDK information described above when the in-app map is used. If you enable cloud backup, Google Firebase processes your account and the selected progress records above on our behalf. We use those records only to back up and restore your Explore 716 progress. See the <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a> and <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Opening Google Maps is a separate user-initiated handoff. If you email us, your email provider and ours process that message; we use it to respond.</p>
+      <p>This website is a static site hosted by GitHub Pages. It has no analytics scripts or site tracking cookies. GitHub may process requests to serve it under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>.</p>
     </section>
 
     <section aria-labelledby="security">
       <h2 id="security">Security and encryption</h2>
-      <p>The app's SQLite data is kept in Android app storage and is not separately encrypted by Explore 716. Device protections and any Android backup encryption depend on your device and account settings. This website uses HTTPS. Google states that Google Maps Platform supports encryption in transit for its services. We do not claim that the app's local records are end-to-end encrypted.</p>
+      <p>SQLite data is kept in Android app storage and is not separately encrypted by Explore 716. Device protections and Android backup encryption depend on your settings. Firebase transfers backup data over encrypted connections and controls access with account-specific Firestore rules. We do not claim end-to-end encryption of the backup. This website uses HTTPS. Google states that Google Maps Platform supports encryption in transit.</p>
     </section>
 
     <section aria-labelledby="retention">
       <h2 id="retention">Retention, deletion, and your controls</h2>
-      <p>Stopping Explore ends that session's location tracking; it does not erase its saved route or earned progress. You can revoke location permission in Android Settings, but that does not delete records already saved. To remove local Explore 716 data, clear the app's storage in Android Settings or uninstall the app. An Android backup may persist or restore eligible data according to your backup settings; manage or delete that backup through your Google account and device settings.</p>
-      <p>Because we do not maintain an Explore 716 account or a route-history server, we cannot delete a local database remotely. To ask about information you have sent us by email, contact <a href="mailto:savicreationsny@gmail.com">savicreationsny@gmail.com</a>.</p>
+      <p>Stopping Explore ends that session's location tracking; it does not erase its saved route or earned progress. You can revoke location permission in Android Settings. To remove local records, clear the app's storage or uninstall it. Android device backup may separately retain eligible local data according to your Google account settings.</p>
+      <p>Signing out stops new Explore 716 cloud backup activity and keeps local progress on the phone. In Account &amp; Backup, you can request deletion of your Firebase account and its cloud progress. Recent sign-in may be required. Local progress remains on the phone unless you clear app data; a minimal deletion marker may remain in Firestore to keep another signed-in device from recreating the deleted backup. You can also use our <a href="../account-deletion/">account-deletion request page</a> if you cannot access the app.</p>
     </section>
 
     <section aria-labelledby="children">
       <h2 id="children">Children's privacy</h2>
-      <p>Explore 716 is not designed for children under 13. We do not knowingly operate an account or collect children's Explore history on a developer server. If you have a concern, contact us at the address below.</p>
+      <p>Explore 716 is not designed for children under 13. If you believe a child has created an account, contact us to request its deletion.</p>
     </section>
 
     <section aria-labelledby="changes">
@@ -79,6 +80,7 @@
 
   <footer class="footer wrap">
     <a href="../">← Explore 716 home</a>
+    <a href="../account-deletion/">Account deletion</a>
     <a href="mailto:savicreationsny@gmail.com">Contact</a>
   </footer>
 </body>
